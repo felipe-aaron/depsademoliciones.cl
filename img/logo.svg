@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440.000000 810.000000" id="depsa-logo" preserveAspectRatio="xMidYMid meet">
   <!-- Amarillo: cambiar fill="#F5E000" al color deseado -->
   <g transform="translate(0.000000,810.000000) scale(0.075000,-0.075000)"
-fill="#F5E000" stroke="none">
+fill="#f2b705" stroke="none">
 <path d="M6994 8375 l-29 -34 -515 -56 c-283 -30 -527 -57 -542 -59 -23 -5
 -30 1 -52 39 -32 53 -61 75 -99 75 -25 0 -391 -156 -528 -226 -56 -28 -74 -64
 -66 -131 l5 -47 -324 -483 c-276 -411 -324 -488 -324 -518 0 -47 12 -70 71
@@ -25,7 +25,7 @@ fill="#F5E000" stroke="none">
 </g>
   <!-- Azul navy -->
   <g transform="translate(0.000000,810.000000) scale(0.075000,-0.075000)"
-fill="#1B3589" stroke="none">
+fill="silver" stroke="none">
 <path d="M11904 6545 c-213 -33 -380 -114 -528 -254 -193 -185 -289 -452 -273
 -756 13 -240 87 -401 237 -517 111 -85 244 -141 574 -238 183 -54 273 -96 334
 -157 80 -80 91 -177 32 -280 -56 -98 -171 -148 -330 -146 -194 3 -381 80 -572
