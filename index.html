@@ -1,57 +1,100 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-CL">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Analytics 4 — reemplaza G-XXXXXXXXXX por tu ID de medición real (analytics.google.com → Admin → Flujos de datos) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
   <meta name="theme-color" content="#111827" />
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
 
   <!-- SEO Primary -->
-  <title>DEPSA Demoliciones | Demoliciones en Santiago con +20 años de experiencia</title>
-  <meta name="description" content="DEPSA Demoliciones: empresa líder en demoliciones en Santiago, Región Metropolitana. Más de 20 años de experiencia en demolición de casas, edificios, galpones y movimientos de tierra. Contáctanos: (02) 2 772 8065." />
-  <meta name="keywords" content="demoliciones santiago, demoliciones región metropolitana, empresa demoliciones, demolición edificios, demolición casas, movimiento tierra, excavaciones, retiro escombros, retiro asbesto, demoliciones chile, DEPSA" />
+  <title>DEPSA Demoliciones | Demoliciones en Santiago y regiones · +20 años</title>
+  <meta name="description" content="Demoliciones en Santiago y regiones con +20 años de experiencia: casas, edificios, galpones, excavaciones, retiro de asbesto y más. Cotización gratis: (02) 2 772 8065." />
+  <meta name="keywords" content="demoliciones santiago, empresa de demoliciones, demolición de casas, demolición de edificios, demolición de galpones, movimiento de tierra, excavaciones, retiro de escombros, retiro de asbesto, desmantelamiento metálico, demoliciones chile, DEPSA" />
   <meta name="author" content="DEPSA Demoliciones" />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <link rel="canonical" href="https://www.depsademoliciones.cl/" />
+
+  <!-- Geo (área de servicio, sin dirección física) -->
+  <meta name="geo.region" content="CL-RM" />
+
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.depsademoliciones.cl/" />
-  <meta property="og:title" content="DEPSA Demoliciones | +20 Años en Demoliciones Santiago" />
-  <meta property="og:description" content="Demoliciones profesionales con más de 20 años de experiencia. Edificios, casas, galpones, movimientos de tierra y más. Cumplimos con todas las normativas SEREMI." />
+  <meta property="og:title" content="DEPSA Demoliciones | Demoliciones en Santiago y regiones" />
+  <meta property="og:description" content="Demoliciones profesionales con +20 años de experiencia. Edificios, casas, galpones, movimientos de tierra, excavaciones y más. Cumplimos con todas las normativas vigentes." />
   <meta property="og:image" content="https://www.depsademoliciones.cl/img/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="899" />
+  <meta property="og:image:alt" content="DEPSA Demoliciones - obra de demolición" />
   <meta property="og:locale" content="es_CL" />
   <meta property="og:site_name" content="DEPSA Demoliciones" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="DEPSA Demoliciones | +20 Años en Demoliciones Santiago" />
-  <meta name="twitter:description" content="Demoliciones profesionales en Santiago. +20 años de experiencia. Llámanos: (02) 2 772 8065" />
+  <meta name="twitter:title" content="DEPSA Demoliciones | Demoliciones en Santiago y regiones" />
+  <meta name="twitter:description" content="Demoliciones profesionales en Santiago y regiones. +20 años de experiencia. Llámanos: (02) 2 772 8065" />
+  <meta name="twitter:image" content="https://www.depsademoliciones.cl/img/og-image.jpg" />
 
   <!-- Structured Data / Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["LocalBusiness", "GeneralContractor"],
+    "@id": "https://www.depsademoliciones.cl/#business",
     "name": "DEPSA Demoliciones",
-    "description": "Empresa especializada en demoliciones con más de 20 años de experiencia en Santiago de Chile.",
-    "url": "https://www.depsademoliciones.cl",
+    "alternateName": "DEPSA Spa",
+    "description": "Empresa especializada en demoliciones de todo tipo con más de 20 años de experiencia en Santiago y regiones: demolición de casas, edificios y galpones, excavaciones, movimientos de tierra, retiro de asbesto y retiro de escombros.",
+    "url": "https://www.depsademoliciones.cl/",
     "telephone": "+56227728065",
-    "email": "depsa@depsademoliciones.cl",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Santiago",
-      "addressRegion": "Región Metropolitana",
-      "addressCountry": "CL"
+    "email": "contacto@depsademoliciones.cl",
+    "priceRange": "$$",
+    "currenciesAccepted": "CLP",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    ],
+    "areaServed": [
+      {"@type": "City", "name": "Santiago"},
+      {"@type": "AdministrativeArea", "name": "Región Metropolitana"},
+      {"@type": "Country", "name": "Chile"}
+    ],
+    "image": [
+      "https://www.depsademoliciones.cl/img/og-image.jpg",
+      "https://www.depsademoliciones.cl/img/about-main.jpg"
+    ],
+    "logo": "https://www.depsademoliciones.cl/img/logo.svg",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servicios de demolición",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Demolición de casas"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Demolición de edificios"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Demolición de galpones y bodegas"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Movimientos de tierra"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Excavaciones"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Retiro de asbesto"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Retiro de escombros"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Desmantelamiento metálico"}}
+      ]
     },
-    "openingHours": "Mo-Fr 08:00-18:00",
-    "areaServed": "Santiago, Chile",
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": -33.4489,
-      "longitude": -70.6693
-    },
-    "image": "https://www.depsademoliciones.cl/img/og-image.jpg",
-    "sameAs": []
+    "sameAs": [
+      "https://www.facebook.com/depsademoliciones",
+      "https://twitter.com/depsademolicion"
+    ]
   }
   </script>
 
@@ -69,27 +112,30 @@
       {
         "@type": "Question",
         "name": "¿Gestionan permisos municipales?",
-        "acceptedAnswer": {"@type": "Answer","text": "Nuestros ingenieros se encargan de tramitar todos los permisos necesarios ante la SEREMI y la municipalidad."}
+        "acceptedAnswer": {"@type": "Answer","text": "Nuestros ingenieros se encargan de tramitar todos los permisos necesarios ante la municipalidad y los organismos competentes."}
       },
       {
         "@type": "Question",
-        "name": "¿Cubre toda la Región Metropolitana?",
-        "acceptedAnswer": {"@type": "Answer","text": "Atendemos obras en toda la Región Metropolitana de Santiago, con maquinaria propia."}
+        "name": "¿En qué zonas trabajan?",
+        "acceptedAnswer": {"@type": "Answer","text": "Atendemos obras en Santiago y regiones, con cobertura a nivel nacional y maquinaria propia."}
       }
     ]
   }
   </script>
 
-  <!-- Nota: crear perfil de Google My Business y obtener backlinks de sitios relevantes para potenciar SEO local -->
-
-  <!-- Fonts -->
+  <!-- Preconnect / Preload (rendimiento - LCP) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://www.googletagmanager.com" />
+  <link rel="preload" as="image" href="img/hero-bg.webp" type="image/webp" fetchpriority="high" />
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Favicon -->
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="img/favicon.png" type="image/png" sizes="64x64" />
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
   <link rel="stylesheet" href="css/styles.css" />
 
 </head>
@@ -101,7 +147,7 @@
       <div class="topbar-right">
         <div class="topbar-item">
           <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-          Lunes–Viernes 08:00–18:00 hrs
+          Lunes–Viernes 09:00–18:00 hrs
         </div>
         <div class="topbar-item">
           <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92V19.92A2 2 0 0 1 19.92 22 19.4 19.4 0 0 1 2 4.08 2 2 0 0 1 4.08 2H7.08A2 2 0 0 1 9 3.72L10.27 7.5A2 2 0 0 1 9.67 9.5L8.4 10.79A16 16 0 0 0 13.21 15.6L14.5 14.33A2 2 0 0 1 16.5 13.73L20.28 15A2 2 0 0 1 22 16.92Z"/></svg>
@@ -115,13 +161,14 @@
   <nav class="navbar" role="navigation" aria-label="Navegación principal">
     <div class="container">
       <a href="#inicio" class="nav-logo" aria-label="DEPSA Demoliciones - Inicio">
-        <img src="img/logo.svg" alt="DEPSA Demoliciones logo" style="height:110px;width:auto;max-width:300px;object-fit:contain" />
+        <img src="img/logo.svg" width="196" height="110" alt="DEPSA Demoliciones - empresa de demoliciones en Santiago" style="height:110px;width:auto;max-width:300px;object-fit:contain" />
       </a>
 
       <ul class="nav-menu" role="list">
         <li><a href="#inicio" class="active">Inicio</a></li>
         <li><a href="#servicios">Servicios</a></li>
         <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
 
@@ -141,6 +188,7 @@
       <a href="#inicio" role="menuitem">Inicio</a>
       <a href="#servicios" role="menuitem">Servicios</a>
       <a href="#nosotros" role="menuitem">Nosotros</a>
+      <a href="#proyectos" role="menuitem">Proyectos</a>
       <a href="#contacto" role="menuitem">Contacto</a>
       <a href="tel:+56227728065" class="btn btn-primary">
         <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92V19.92A2 2 0 0 1 19.92 22 19.4 19.4 0 0 1 2 4.08 2 2 0 0 1 4.08 2H7.08A2 2 0 0 1 9 3.72L10.27 7.5A2 2 0 0 1 9.67 9.5L8.4 10.79A16 16 0 0 0 13.21 15.6L14.5 14.33A2 2 0 0 1 16.5 13.73L20.28 15A2 2 0 0 1 22 16.92Z"/></svg>
@@ -162,11 +210,11 @@
       <h1 class="hero-title fade-up">
         Demoliciones<br />
         <em>profesionales</em><br />
-        en Santiago
+        en Santiago y regiones
       </h1>
 
       <p class="hero-desc fade-up delay-1">
-        Empresa especializada en demoliciones de todo tipo. Máxima seguridad, rapidez y cumplimiento de todas las normativas SEREMI de Salud. Dejamos tu terreno listo y nivelado.
+        Empresa especializada en demoliciones de todo tipo. Máxima seguridad, rapidez y cumplimiento de todas las normativas vigentes. Nos encargamos de permisos, ejecución y retiro de escombros, para que tu proyecto avance sin problemas.
       </p>
 
       <div class="hero-actions fade-up delay-2">
@@ -174,7 +222,7 @@
           <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           Solicitar cotización gratis
         </a>
-        <a href="tel:+5622772806" class="btn btn-outline" aria-label="Llamar a DEPSA Demoliciones">
+        <a href="tel:+56227728065" class="btn btn-outline" aria-label="Llamar a DEPSA Demoliciones">
           <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92V19.92A2 2 0 0 1 19.92 22 19.4 19.4 0 0 1 2 4.08 2 2 0 0 1 4.08 2H7.08A2 2 0 0 1 9 3.72L10.27 7.5A2 2 0 0 1 9.67 9.5L8.4 10.79A16 16 0 0 0 13.21 15.6L14.5 14.33A2 2 0 0 1 16.5 13.73L20.28 15A2 2 0 0 1 22 16.92Z"/></svg>
           (02) 2 772 8065
         </a>
@@ -186,16 +234,12 @@
           <div class="stat-label">Años de experiencia</div>
         </div>
         <div class="stat-item">
-          <div class="stat-number">500<span>+</span></div>
-          <div class="stat-label">Proyectos realizados</div>
-        </div>
-        <div class="stat-item">
           <div class="stat-number">100<span>%</span></div>
-          <div class="stat-label">Normativa SEREMI</div>
+          <div class="stat-label">Normativa vigente</div>
         </div>
         <div class="stat-item">
-          <div class="stat-number">0<span></span></div>
-          <div class="stat-label">Accidentes registrados</div>
+          <div class="stat-number"><span>✓</span></div>
+          <div class="stat-label">Gestión de permisos</div>
         </div>
       </div>
     </div>
@@ -211,7 +255,7 @@
     <div class="container">
       <div class="trust-item">
         <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        Cumplimiento Normativa SEREMI
+        Cumplimiento Normativa vigente
       </div>
       <div class="trust-item">
         <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
@@ -222,7 +266,7 @@
         Permisos municipales gestionados
       </div>
       <div class="trust-item">
-        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"/><path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"/><path d="m14 16-3 3 3 3"/><path d="M8.293 13.596 7.196 9.5 3.1 10.598"/><path d="m9.344 5.811 1.093-1.892A1.83 1.83 0 0 1 11.985 3a1.784 1.784 0 0 1 1.546.888l3.943 6.843"/><path d="m13.378 9.633 4.096 1.098 1.097-4.096"/></svg>
         Reciclaje de materiales
       </div>
     </div>
@@ -234,10 +278,10 @@
       <div class="services-header">
         <div>
           <span class="section-tag">Nuestros servicios</span>
-          <h2 class="section-title" id="services-title">Todo en<br /><span>demoliciones</span></h2>
+          <h2 class="section-title" id="services-title">Demolemos todo tipo de <span>estructuras,</span><br />sin complicaciones</h2>
           <p class="section-lead">Contamos con el equipo humano y maquinaria para cualquier tipo de demolición, desde una casa hasta un edificio completo.</p>
         </div>
-        <a href="#contacto" class="btn btn-dark">Ver todos los servicios</a>
+        <a href="#servicios" class="btn btn-dark">Ver todos los servicios</a>
       </div>
 
       <div class="services-grid">
@@ -249,7 +293,7 @@
           </div>
           <h3>Demoliciones a pequeña escala</h3>
           <p>Casas, muros, divisiones interiores y estructuras menores. Trabajo limpio y eficiente con mínima molestia para el entorno.</p>
-          <span class="service-tag">Residencial →</span>
+          <a class="service-tag" href="servicios/demolicion-de-casas.html">Ver demolición de casas →</a>
         </article>
 
         <article class="service-card fade-up delay-1">
@@ -259,57 +303,47 @@
           </div>
           <h3>Demoliciones a gran escala</h3>
           <p>Edificios, galpones industriales y grandes obras. Planificación detallada, maquinaria pesada y máxima seguridad.</p>
-          <span class="service-tag">Industrial →</span>
+          <a class="service-tag" href="servicios/demolicion-de-edificios.html">Ver demolición de edificios →</a>
         </article>
 
         <article class="service-card fade-up delay-2">
           <div class="service-icon" aria-hidden="true">
-            <!-- Montaña / terreno (movimientos de tierra) -->
+            <!-- Montaña / terreno (movimientos de tierra y excavaciones) -->
             <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg>
           </div>
-          <h3>Movimientos de tierra</h3>
-          <p>Rellenos, nivelaciones y preparación de terreno. Equipos modernos que garantizan rapidez y precisión en cada trabajo.</p>
-          <span class="service-tag">Terrenos →</span>
+          <h3>Movimientos de tierra y excavaciones</h3>
+          <p>Excavación, carga y preparación de terreno para fundaciones, sótanos, piscinas y proyectos de ingeniería. Dejamos la superficie a niveles naturales, coordinados con topografía y estructura.</p>
+          <a class="service-tag" href="servicios/movimientos-de-tierra.html">Ver movimientos de tierra →</a>
         </article>
 
         <article class="service-card fade-up">
-          <div class="service-icon" aria-hidden="true">
-            <!-- Pala (excavaciones) -->
-            <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 22v-5l5-5 5 5-5 5z"/><path d="M9.5 14.5 16 8"/><path d="m17 2 5 5-.5.5a3.53 3.53 0 0 1-5 0c-.6-.6-1-1.4-1-2.2v-.3c0-.8-.4-1.6-1-2.2L14 2z"/></svg>
-          </div>
-          <h3>Excavaciones</h3>
-          <p>Excavaciones para fundaciones, sótanos, piscinas y proyectos de ingeniería. Trabajo coordinado con topografía y estructura.</p>
-          <span class="service-tag">Fundaciones →</span>
-        </article>
-
-        <article class="service-card fade-up delay-1">
           <div class="service-icon" aria-hidden="true">
             <!-- Escudo con alerta (asbesto / peligro) -->
             <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
           </div>
           <h3>Retiro de asbesto</h3>
           <p>Remoción especializada y segura de materiales con asbesto (amianto). Protocolo certificado conforme a normativa ambiental.</p>
-          <span class="service-tag">Especializado →</span>
+          <a class="service-tag" href="servicios/retiro-de-asbesto.html">Ver retiro de asbesto →</a>
         </article>
 
-        <article class="service-card fade-up delay-2">
+        <article class="service-card fade-up delay-1">
           <div class="service-icon" aria-hidden="true">
             <!-- Camión de carga (retiro escombros) -->
             <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11v14"/><rect x="9" y="11" width="6" height="6" rx="1"/><path d="M14 17h-4"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5" cy="17.5" r="2.5"/><circle cx="18.5" cy="17.5" r="2.5"/></svg>
           </div>
           <h3>Retiro de escombros</h3>
-          <p>Limpieza y transporte de escombros y materiales sobrantes. Tu terreno queda libre, nivelado y listo para la siguiente etapa.</p>
-          <span class="service-tag">Limpieza →</span>
+          <p>Limpieza y transporte de escombros y materiales sobrantes. Tu terreno queda libre y listo para la siguiente etapa.</p>
+          <a class="service-tag" href="servicios/retiro-de-escombros.html">Ver retiro de escombros →</a>
         </article>
 
-        <article class="service-card fade-up">
+        <article class="service-card fade-up delay-2">
           <div class="service-icon" aria-hidden="true">
             <!-- Llave inglesa (desmantelamiento metálico) -->
             <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
           </div>
           <h3>Desmantelamiento metálico</h3>
           <p>Desmantelamiento de estructuras metálicas, naves industriales y torres. Recuperación y reciclaje de materiales ferrosos.</p>
-          <span class="service-tag">Metalmecánica →</span>
+          <a class="service-tag" href="servicios/demolicion-de-galpones.html">Ver demolición de galpones →</a>
         </article>
 
 
@@ -322,10 +356,16 @@
     <div class="container">
       <div class="about-visual fade-up">
         <div class="about-img-main">
-          <img src="img/about-main.jpg" alt="Equipo DEPSA Demoliciones trabajando en obra" loading="lazy" />
+          <picture>
+            <source srcset="img/about-main.webp" type="image/webp" />
+            <img src="img/about-main.jpg" width="1200" height="800" alt="Equipo de DEPSA Demoliciones trabajando en una obra de demolición en Santiago" loading="lazy" decoding="async" />
+          </picture>
         </div>
         <div class="about-img-secondary">
-          <img src="img/about-secondary.jpg" alt="Maquinaria pesada DEPSA" loading="lazy" />
+          <picture>
+            <source srcset="img/about-secondary.webp" type="image/webp" />
+            <img src="img/about-secondary.jpg" width="800" height="533" alt="Maquinaria pesada de DEPSA en faena de demolición" loading="lazy" decoding="async" />
+          </picture>
         </div>
         <div class="about-badge" aria-label="Más de 20 años de experiencia">
           <strong>20+</strong>
@@ -336,14 +376,14 @@
       <div class="about-content fade-up delay-2">
         <span class="section-tag">Quiénes somos</span>
         <h2 class="section-title" id="about-title">La experiencia<br />que da <span>confianza</span></h2>
-        <p class="section-lead">DEPSA Demoliciones lleva más de 20 años recuperando suelos y entregando terrenos listos en Santiago. Nos enfocamos en ofrecer el mejor servicio garantizando máxima seguridad y velocidad de ejecución.</p>
+        <p class="section-lead">DEPSA Demoliciones lleva más de 20 años recuperando suelos en Santiago y regiones. Nos enfocamos en ofrecer el mejor servicio garantizando máxima seguridad y velocidad de ejecución.</p>
 
         <ul class="about-list" role="list">
           <li>
             <div class="check-icon" aria-hidden="true">
               <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
-            Cumplimiento estricto con normativa SEREMI de Salud
+            Cumplimiento estricto de la normativa vigente
           </li>
           <li>
             <div class="check-icon" aria-hidden="true">
@@ -355,7 +395,7 @@
             <div class="check-icon" aria-hidden="true">
               <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
-            Terrenos entregados nivelados, libres de escombros
+            Terrenos entregados libres de escombro y a niveles naturales
           </li>
           <li>
             <div class="check-icon" aria-hidden="true">
@@ -367,7 +407,7 @@
             <div class="check-icon" aria-hidden="true">
               <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
-            Cobertura en toda la Región Metropolitana de Santiago
+            Cobertura a nivel Nacional (Santiago y regiones)
           </li>
         </ul>
 
@@ -392,42 +432,42 @@
 
       <div class="structures-grid fade-up delay-1">
         <div class="struct-item">
-          <div class="struct-bg" style="background-image:url('img/struct-edificios.jpg')"></div>
+          <div class="struct-bg" style="background-image:url('img/struct-edificios.webp')"></div>
           <div class="struct-overlay"></div>
           <div class="struct-content">
             <div class="struct-number">01</div>
             <div class="struct-line"></div>
-            <div class="struct-name">Edificios</div>
+            <h3 class="struct-name">Demolición de edificios</h3>
             <div class="struct-desc">Demolición total o parcial</div>
           </div>
         </div>
         <div class="struct-item">
-          <div class="struct-bg" style="background-image:url('img/struct-casas.jpg')"></div>
+          <div class="struct-bg" style="background-image:url('img/struct-casas.webp')"></div>
           <div class="struct-overlay"></div>
           <div class="struct-content">
             <div class="struct-number">02</div>
             <div class="struct-line"></div>
-            <div class="struct-name">Casas</div>
+            <h3 class="struct-name">Demolición de casas</h3>
             <div class="struct-desc">Residencial y unifamiliar</div>
           </div>
         </div>
         <div class="struct-item">
-          <div class="struct-bg" style="background-image:url('img/struct-galpones.jpg')"></div>
+          <div class="struct-bg" style="background-image:url('img/struct-galpones.webp')"></div>
           <div class="struct-overlay"></div>
           <div class="struct-content">
             <div class="struct-number">03</div>
             <div class="struct-line"></div>
-            <div class="struct-name">Galpones y Bodegas</div>
+            <h3 class="struct-name">Galpones y bodegas</h3>
             <div class="struct-desc">Industrial y comercial</div>
           </div>
         </div>
         <div class="struct-item">
-          <div class="struct-bg" style="background-image:url('img/struct-calles.jpg')"></div>
+          <div class="struct-bg" style="background-image:url('img/struct-calles.webp')"></div>
           <div class="struct-overlay"></div>
           <div class="struct-content">
             <div class="struct-number">04</div>
             <div class="struct-line"></div>
-            <div class="struct-name">Calles y pavimentos</div>
+            <h3 class="struct-name">Calles y pavimentos</h3>
             <div class="struct-desc">Obras civiles y vialidad</div>
           </div>
         </div>
@@ -447,8 +487,8 @@
       <div class="process-steps">
         <div class="step-item fade-up">
           <div class="step-circle">1</div>
-          <h4>Visita y cotización</h4>
-          <p>Visitamos el terreno, evaluamos el proyecto y entregamos presupuesto sin costo.</p>
+          <h4>Evaluación y cotización</h4>
+          <p>Visitamos el terreno y entregamos presupuesto sin costo.</p>
         </div>
         <div class="step-item fade-up delay-1">
           <div class="step-circle">2</div>
@@ -463,8 +503,68 @@
         <div class="step-item fade-up delay-3">
           <div class="step-circle">4</div>
           <h4>Entrega del terreno</h4>
-          <p>Retiro completo de escombros. Terreno limpio, nivelado y listo para construir.</p>
+          <p>Retiro total de escombros. Dejamos el terreno listo para su próximo uso.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALERÍA / TRABAJOS REALIZADOS ===== -->
+  <section class="gallery" id="proyectos" aria-labelledby="gallery-title">
+    <div class="container">
+      <div class="gallery-header fade-up">
+        <span class="section-tag">Galería</span>
+        <h2 class="section-title" id="gallery-title">Trabajos <span>realizados</span></h2>
+        <p class="section-lead">Resultados reales en obras de demolición. Fotos antes y después de cada proyecto.</p>
+      </div>
+
+      <div class="gallery-grid">
+
+        <!-- PLACEHOLDER: reemplaza los <img> por las fotos reales (antes/después) -->
+        <article class="gallery-card fade-up">
+          <div class="gallery-ba">
+            <div class="gallery-ph gallery-ph--before"><span class="gallery-tag">Antes</span></div>
+            <div class="gallery-ph gallery-ph--after"><span class="gallery-tag">Después</span></div>
+          </div>
+          <div class="gallery-body">
+            <h3>Demolición de edificio</h3>
+            <p>Santiago · Demolición total y retiro de escombros.</p>
+          </div>
+        </article>
+
+        <article class="gallery-card fade-up delay-1">
+          <div class="gallery-ba">
+            <div class="gallery-ph gallery-ph--before"><span class="gallery-tag">Antes</span></div>
+            <div class="gallery-ph gallery-ph--after"><span class="gallery-tag">Después</span></div>
+          </div>
+          <div class="gallery-body">
+            <h3>Demolición de casa</h3>
+            <p>Región Metropolitana · Terreno entregado libre de escombro.</p>
+          </div>
+        </article>
+
+        <article class="gallery-card fade-up delay-2">
+          <div class="gallery-ba">
+            <div class="gallery-ph gallery-ph--before"><span class="gallery-tag">Antes</span></div>
+            <div class="gallery-ph gallery-ph--after"><span class="gallery-tag">Después</span></div>
+          </div>
+          <div class="gallery-body">
+            <h3>Galpón industrial</h3>
+            <p>Desmantelamiento metálico y retiro de materiales.</p>
+          </div>
+        </article>
+
+        <article class="gallery-card fade-up">
+          <div class="gallery-ba">
+            <div class="gallery-ph gallery-ph--before"><span class="gallery-tag">Antes</span></div>
+            <div class="gallery-ph gallery-ph--after"><span class="gallery-tag">Después</span></div>
+          </div>
+          <div class="gallery-body">
+            <h3>Calles y pavimentos</h3>
+            <p>Obra civil · Demolición y preparación de terreno.</p>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
@@ -488,7 +588,7 @@
             </div>
           </a>
 
-          <a href="tel:+5694966531" class="contact-card" aria-label="Llamar al celular">
+          <a href="https://wa.me/56994966531?text=Hola%20DEPSA%2C%20quiero%20cotizar%20una%20demolici%C3%B3n." target="_blank" rel="noopener" class="contact-card" data-wa="true" aria-label="Escribir por WhatsApp">
             <div class="contact-card-icon">
               <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="17" r="1"/></svg>
             </div>
@@ -514,7 +614,7 @@
             </div>
             <div class="contact-card-body">
               <div class="contact-card-label">Horario de atención</div>
-              <div class="contact-card-value">Lunes a Viernes · 08:00–18:00</div>
+              <div class="contact-card-value">Lunes a Viernes · 09:00–18:00</div>
             </div>
           </div>
         </div>
@@ -523,13 +623,18 @@
       <div class="contact-form-wrap fade-up delay-2">
         <div class="form-title">Solicita tu cotización</div>
         <form
-          action="mailto:contacto@depsademoliciones.cl"
-          method="post"
-          enctype="text/plain"
+          action="contacto.php"
+          method="POST"
           novalidate
           aria-label="Formulario de contacto"
           id="contactForm"
         >
+          <!-- Campo anti-spam (honeypot): oculto para humanos, los bots lo rellenan -->
+          <div class="hp-field" aria-hidden="true">
+            <label for="website">No completar este campo</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+          </div>
+          <div id="formMsg" class="form-msg" role="status" aria-live="polite"></div>
           <div class="form-row">
             <div class="form-group">
               <label for="nombre">Nombre completo *</label>
@@ -552,6 +657,10 @@
             <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
             Enviar solicitud
           </button>
+          <button type="button" id="waSubmit" class="btn btn-outline form-submit" style="margin-top:.75rem">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Enviar por WhatsApp
+          </button>
         </form>
       </div>
     </div>
@@ -563,7 +672,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-logo">
-            <img src="img/logo.svg" alt="DEPSA Demoliciones" />
+            <img src="img/logo.svg" width="206" height="116" alt="DEPSA Demoliciones" loading="lazy" />
           </div>
           <p>Empresa especializada en demoliciones con más de 20 años de experiencia en Santiago de Chile. Seguridad, rapidez y cumplimiento normativo en cada proyecto.</p>
         </div>
@@ -583,7 +692,7 @@
           <h4>Contacto</h4>
           <ul>
             <li><a href="tel:+56227728065">(02) 2 772 8065</a></li>
-            <li><a href="tel:+5694966531">+56 9 9496 6531</a></li>
+            <li><a href="tel:+56994966531">+56 9 9496 6531</a></li>
             <li><a href="mailto:contacto@depsademoliciones.cl">contacto@depsademoliciones.cl</a></li>
           </ul>
         </div>
@@ -591,14 +700,13 @@
 
       <div class="footer-bottom">
         <span>© <span id="footerYear"></span> DEPSA Demoliciones. Todos los derechos reservados.</span>
-        <span class="visually-hidden">Recuerda reclamar tu ficha en Google My Business y conseguir enlaces de calidad desde sitios locales.</span>
       </div>
     </div>
   </footer>
 
   <!-- FLOATING CTA -->
   <div class="float-cta" role="complementary" aria-label="Contacto rápido">
-    <a href="tel:+5694966531" class="float-btn float-phone" aria-label="Llamar por WhatsApp / celular" title="Llamar: +56 9 9496 6531">
+    <a href="https://wa.me/56994966531?text=Hola%20DEPSA%2C%20quiero%20cotizar%20una%20demolici%C3%B3n." target="_blank" rel="noopener" class="float-btn float-phone" data-wa="true" aria-label="Escribir por WhatsApp" title="WhatsApp: +56 9 9496 6531">
       <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
 
