@@ -629,6 +629,35 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 18px;
     }
+    .gallery-group-title {
+      grid-column: 1 / -1;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 8px 0 -4px;
+      padding-top: 28px;
+      border-top: 1px solid var(--gray-light, #e5e7eb);
+    }
+    .gallery-mosaic > .gallery-group-title:first-child {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+    .gallery-group-title h3 {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      color: var(--dark);
+      margin: 0;
+    }
+    .gallery-group-title span {
+      font-size: .88rem;
+      color: var(--gray);
+      font-weight: 600;
+    }
+    @media (max-width: 560px) {
+      .gallery-group-title { padding-top: 20px; }
+    }
     .gallery-item {
       position: relative;
       display: block;
@@ -705,7 +734,11 @@
     /* =====================================================
        PÁGINAS DE SERVICIO
     ===================================================== */
-    .page-hero { background: var(--dark); color: var(--white); padding: 140px 0 64px; position: relative; }
+    .page-hero { background-color: var(--dark); color: var(--white); padding: 140px 0 64px; position: relative; overflow: hidden; }
+    .page-hero::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 5px; background: var(--orange); z-index: 2; }
+    .page-hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: .45; }
+    .page-hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(105deg, rgba(17,24,39,.97) 0%, rgba(17,24,39,.75) 55%, rgba(17,24,39,.35) 100%); }
+    .page-hero .container { position: relative; z-index: 1; }
     .breadcrumb { font-size: .82rem; color: rgba(255,255,255,.55); margin-bottom: 18px; }
     .breadcrumb a { color: var(--orange); }
     .breadcrumb span { margin: 0 6px; opacity: .5; }
