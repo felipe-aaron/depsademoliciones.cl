@@ -1,5 +1,5 @@
     // Year in footer
-    document.getElementById('footerYear').textContent = new Date().getFullYear();
+    document.getElementById('footerYear').textContent = '2005–' + new Date().getFullYear();
 
     // Mobile nav toggle
     const toggle = document.getElementById('navToggle');
@@ -152,7 +152,7 @@
         const data = readForm();
         if (!data.ok) return;
         const texto =
-          'Hola DEPSA, quiero cotizar una demolición.%0A%0A' +
+          'Hola DEPSA, los contacto desde su sitio web para cotizar un proyecto de demolición.%0A%0A' +
           'Nombre: ' + encodeURIComponent(data.nombre) + '%0A' +
           'Teléfono: ' + encodeURIComponent(data.telefono) + '%0A' +
           'Email: ' + encodeURIComponent(data.email) + '%0A' +
@@ -160,5 +160,58 @@
         track('envio_formulario', { metodo: 'whatsapp' });
         track('contacto_whatsapp', { metodo: 'whatsapp_formulario' });
         window.open('https://wa.me/56994966531?text=' + texto, '_blank', 'noopener');
+      });
+    }
+
+    // Lightbox de la galería (galeria.html)
+    const galleryItems = Array.prototype.slice.call(document.querySelectorAll('.gallery-item'));
+    const lightbox = document.getElementById('lightbox');
+    if (galleryItems.length && lightbox) {
+      const lbImg = lightbox.querySelector('.lightbox-img');
+      const lbCap = lightbox.querySelector('.lightbox-caption');
+      const lbDesc = lightbox.querySelector('.lightbox-desc');
+      const lbCount = lightbox.querySelector('.lightbox-count');
+      let current = 0;
+
+      function showItem(index) {
+        current = (index + galleryItems.length) % galleryItems.length;
+        const item = galleryItems[current];
+        lightbox.classList.remove('has-error');
+        lbImg.src = item.getAttribute('data-src') || '';
+        lbImg.alt = item.getAttribute('data-caption') || '';
+        if (lbCap) lbCap.textContent = item.getAttribute('data-caption') || '';
+        if (lbDesc) lbDesc.textContent = item.getAttribute('data-desc') || '';
+        if (lbCount) lbCount.textContent = (current + 1) + ' / ' + galleryItems.length;
+      }
+      function openLightbox(index) {
+        showItem(index);
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeLightbox() {
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      // Si la foto aún no existe, muestra el placeholder en vez de imagen rota
+      lbImg.addEventListener('error', function() { lightbox.classList.add('has-error'); });
+
+      galleryItems.forEach(function(item, i) {
+        item.addEventListener('click', function() { openLightbox(i); });
+      });
+
+      lightbox.addEventListener('click', function(e) {
+        if (e.target.hasAttribute('data-lb-close')) closeLightbox();
+        else if (e.target.closest('[data-lb-prev]')) showItem(current - 1);
+        else if (e.target.closest('[data-lb-next]')) showItem(current + 1);
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (!lightbox.classList.contains('open')) return;
+        if (e.key === 'Escape') closeLightbox();
+        else if (e.key === 'ArrowLeft') showItem(current - 1);
+        else if (e.key === 'ArrowRight') showItem(current + 1);
       });
     }

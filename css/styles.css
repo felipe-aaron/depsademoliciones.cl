@@ -617,6 +617,91 @@
     @media (max-width: 900px) { .gallery-grid { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 600px) { .gallery-grid { grid-template-columns: 1fr; } }
 
+    /* Banda CTA que enlaza a la galería (galeria.html) */
+    .gallery-cta { padding: 90px 0; background: var(--gray-light); }
+    .gallery-cta-inner { text-align: center; max-width: 640px; margin: 0 auto; }
+    .gallery-cta-inner .section-lead { margin: 0 auto 28px; }
+    .gallery-cta-inner .btn { display: inline-flex; align-items: center; gap: 10px; }
+
+    /* Mosaico de fotos (galeria.html) */
+    .gallery-mosaic {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .gallery-item {
+      position: relative;
+      display: block;
+      padding: 0;
+      border: 0;
+      cursor: pointer;
+      aspect-ratio: 4 / 3;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--dark-2), var(--dark));
+      box-shadow: var(--shadow-md);
+    }
+    .gallery-item img {
+      width: 100%; height: 100%;
+      object-fit: cover; display: block;
+      transition: transform .45s ease;
+    }
+    .gallery-item:hover img { transform: scale(1.06); }
+    .gallery-item-cap {
+      position: absolute; left: 0; right: 0; bottom: 0;
+      padding: 30px 16px 14px;
+      text-align: left;
+      color: var(--white);
+      font-weight: 700; font-size: .92rem;
+      background: linear-gradient(to top, rgba(17,24,39,.85), rgba(17,24,39,0));
+    }
+    .gallery-item::after {
+      content: "";
+      position: absolute; top: 12px; right: 12px;
+      width: 34px; height: 34px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.15) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='none' stroke='white' stroke-width='2' viewBox='0 0 24 24'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='M21 21l-4.3-4.3M11 8v6M8 11h6'/%3E%3C/svg%3E") center / 18px no-repeat;
+      opacity: 0; transition: opacity .25s ease;
+    }
+    .gallery-item:hover::after, .gallery-item:focus-visible::after { opacity: 1; }
+    @media (max-width: 900px) { .gallery-mosaic { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) { .gallery-mosaic { grid-template-columns: 1fr; } }
+
+    /* Lightbox */
+    .lightbox { position: fixed; inset: 0; z-index: 2000; display: none; align-items: center; justify-content: center; }
+    .lightbox.open { display: flex; }
+    .lightbox-backdrop { position: absolute; inset: 0; background: rgba(10,12,18,.93); }
+    .lightbox-stage { position: relative; z-index: 1; max-width: min(1100px, 92vw); text-align: center; }
+    .lightbox-img { max-width: 100%; max-height: 78vh; border-radius: var(--radius-md); object-fit: contain; box-shadow: 0 20px 60px rgba(0,0,0,.5); }
+    .lightbox-ph { display: none; }
+    .lightbox.has-error .lightbox-img { display: none; }
+    .lightbox.has-error .lightbox-ph {
+      display: flex; align-items: center; justify-content: center;
+      width: min(720px, 88vw); aspect-ratio: 4 / 3;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, var(--dark-2), var(--dark));
+      color: rgba(255,255,255,.6); font-weight: 600; letter-spacing: .04em;
+    }
+    .lightbox-caption { color: var(--white); margin-top: 16px; font-size: 1.05rem; font-weight: 700; }
+    .lightbox-desc { color: rgba(255,255,255,.8); margin: 8px auto 0; max-width: 620px; font-size: .92rem; line-height: 1.55; }
+    .lightbox-count { display: block; color: rgba(255,255,255,.55); font-size: .8rem; margin-top: 10px; }
+    .lightbox-close, .lightbox-nav {
+      position: absolute; z-index: 2;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(255,255,255,.12); color: var(--white);
+      border: 0; border-radius: 50%; cursor: pointer; line-height: 1;
+      transition: background .2s ease, color .2s ease;
+    }
+    .lightbox-close { top: 20px; right: 22px; width: 46px; height: 46px; font-size: 1.7rem; }
+    .lightbox-nav { top: 50%; transform: translateY(-50%); width: 54px; height: 54px; font-size: 2rem; }
+    .lightbox-prev { left: 20px; }
+    .lightbox-next { right: 20px; }
+    .lightbox-close:hover, .lightbox-nav:hover { background: var(--orange); color: var(--dark); }
+    @media (max-width: 560px) {
+      .lightbox-nav { width: 44px; height: 44px; font-size: 1.6rem; }
+      .lightbox-prev { left: 8px; } .lightbox-next { right: 8px; }
+    }
+
     /* =====================================================
        PÁGINAS DE SERVICIO
     ===================================================== */
